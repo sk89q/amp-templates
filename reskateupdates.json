@@ -6,5 +6,15 @@
         "UpdateSourceData": "powershell.exe",
         "UpdateSourceArgs": "-NoProfile -ExecutionPolicy Bypass -Command \"$ErrorActionPreference='Stop'; $ProgressPreference='SilentlyContinue'; [Net.ServicePointManager]::SecurityProtocol=[Net.SecurityProtocolType]::Tls12; $d='{{$FullBaseDir}}'; New-Item -ItemType Directory -Force $d | Out-Null; $r=Invoke-RestMethod 'https://api.github.com/repos/Dingo-Shenanigans/ReSkate/releases/latest' -Headers @{'User-Agent'='AMP-ReSkate-Template'}; $a=$r.assets | Where-Object { $_.name -like 'ReSkateServer-*.zip' } | Select-Object -First 1; if (-not $a) { throw 'No Windows server zip found in the latest ReSkate release' }; $z=Join-Path $env:TEMP $a.name; Write-Output ('Downloading ' + $a.name); Invoke-WebRequest $a.browser_download_url -OutFile $z -UseBasicParsing; Expand-Archive -Path $z -DestinationPath $d -Force; Remove-Item $z -Force; Set-Content -Path (Join-Path $d 'reskate-version.txt') -Value $r.tag_name; Write-Output ('Installed ReSkate server ' + $r.tag_name)\"",
         "SkipOnFailure": false
+    },
+    {
+        "UpdateStageName": "ReSkateServer.json Download",
+        "UpdateSourcePlatform": "All",
+        "UpdateSource": "FetchURL",
+        "UpdateSourceData": "https://raw.githubusercontent.com/sk89q/amp-templates/main/reskateserver.json",
+        "UpdateSourceArgs": "ReSkateServer.json",
+        "UpdateSourceTarget": "{{$FullBaseDir}}",
+        "OverwriteExistingFiles": false,
+        "SkipOnFailure": false
     }
 ]

@@ -1,0 +1,132 @@
+{
+  "server": {
+    "name": "AMP Powered ReSkate Server",
+    "password": "",
+    "welcome_message": "",
+    "chat_color": "#8E5CFF",
+    "chat_text_color": "#D9C8FF",
+    "listed": true,
+    "max_players": 16,
+    "port": 27015,
+    "query_port": 27016,
+    "steam_token": "",
+    "auto_update": false,
+    "autostart": false,
+    "activity_log": true
+  },
+  "access": {
+    "reserved_players_slots": [],
+    "use_global_bans": true
+  },
+  "maps": {
+    "map": "San Vansterdam",
+    "pool": [],
+    "rotation_minutes": 0,
+    "rotation_vote": false,
+    "rotation_vote_seconds": 30,
+    "rotation_extend_minutes": 15,
+    "rotation_announce": true,
+    "latest_versions": false,
+    "latest_check_minutes": 60,
+    "parks": {
+      "construction": "skatepark_01",
+      "financial": "flumppark_08",
+      "historic": "megapark_05"
+    },
+    "world_layer_sync": false,
+    "layers": {},
+    "park_mods": [],
+    "park_limits": {
+      "objects": 512,
+      "parks": 3
+    }
+  },
+  "plugins": {
+    "required": []
+  },
+  "players": {
+    "allow_boosts": true,
+    "allow_no_bail": true,
+    "allow_noclip": true,
+    "allow_parties": true,
+    "party_size": 8,
+    "afk_kick_minutes": 0,
+    "kick_minutes": 0,
+    "word_warnings": 3,
+    "use_global_word_filter": true,
+    "allow_voice_chat": true,
+    "voice_range": 300.0,
+    "object_placement": "everyone",
+    "object_limit": 100,
+    "allow_object_scaling": true,
+    "sync_effects": true,
+    "announce_throwdowns": true,
+    "throwdown_locks": []
+  },
+  "anti_cheat": {
+    "speed_hack": "warn",
+    "pinned_board": "warn",
+    "modified_scoring": "warn",
+    "allowed_scoring_mods": [],
+    "enforce_tuning": true,
+    "bone_scale_limit": 2.0,
+    "bone_reach_limit": 1.0
+  },
+  "network": {
+    "use_steam_relay": true,
+    "send_rate": 900,
+    "crowd_budget": 600,
+    "pack_ms": 10,
+    "threads": 0,
+    "finger_distance": 25,
+    "distances": {
+      "full_rate_return": 50,
+      "half_rate_start": 60,
+      "half_rate_return": 150,
+      "low_rate_start": 170
+    },
+    "steam_debug": false
+  },
+  "votes": {
+    "map": {
+      "enabled": false,
+      "percent": 60,
+      "seconds": 0,
+      "cooldown_seconds": 0,
+      "min_players": 1
+    },
+    "kick": {
+      "enabled": false,
+      "percent": 60,
+      "seconds": 0,
+      "cooldown_seconds": 0,
+      "min_players": 1
+    },
+    "time_of_day": {
+      "enabled": false,
+      "percent": 50,
+      "seconds": 0,
+      "cooldown_seconds": 0,
+      "min_players": 1
+    },
+    "extend_map": {
+      "enabled": true,
+      "percent": 50,
+      "seconds": 0,
+      "cooldown_seconds": 0,
+      "min_players": 1
+    },
+    "seconds": 30,
+    "cooldown_seconds": 60,
+    "kick_minutes": 5,
+    "starter_votes_yes": true,
+    "polls": "admins",
+    "poll_seconds": 60,
+    "custom": []
+  },
+  "announcements": {
+    "messages": [],
+    "interval_minutes": 0
+  },
+  "commands": []
+}
