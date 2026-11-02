@@ -1,0 +1,165 @@
+[
+    {
+        "DisplayName": "Game Port",
+        "Category": "ReSkate:skateboarding",
+        "Subcategory": "Server:dns:1",
+        "Description": "",
+        "Keywords": "",
+        "FieldName": "$GamePort",
+        "InputType": "number",
+        "Hidden": true,
+        "ParamFieldName": "$.server.port",
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "Query Port",
+        "Category": "ReSkate:skateboarding",
+        "Subcategory": "Server:dns:1",
+        "Description": "",
+        "Keywords": "",
+        "FieldName": "$QueryPort",
+        "InputType": "number",
+        "Hidden": true,
+        "ParamFieldName": "$.server.query_port",
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "Server Auto Update",
+        "Category": "ReSkate:skateboarding",
+        "Subcategory": "Server:dns:1",
+        "Description": "Disabled so AMP handles updates (use Update in AMP)",
+        "Keywords": "",
+        "FieldName": "auto_update",
+        "InputType": "checkbox",
+        "Hidden": true,
+        "ParamFieldName": "$.server.auto_update",
+        "DefaultValue": "false",
+        "EnumValues": {
+            "False": "false",
+            "True": "true"
+        }
+    },
+    {
+        "DisplayName": "Server Name",
+        "Category": "ReSkate:skateboarding",
+        "Subcategory": "Server:dns:1",
+        "Description": "The name of the server as shown in the in-game server browser",
+        "Keywords": "server,name",
+        "FieldName": "name",
+        "InputType": "text",
+        "ParamFieldName": "$.server.name",
+        "DefaultValue": "AMP Powered ReSkate Server",
+        "Placeholder": "AMP Powered ReSkate Server",
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "Server Password",
+        "Category": "ReSkate:skateboarding",
+        "Subcategory": "Server:dns:1",
+        "Description": "Leave empty to let anyone join; otherwise players must enter this to join",
+        "Keywords": "password",
+        "FieldName": "password",
+        "InputType": "Password",
+        "ParamFieldName": "$.server.password",
+        "DefaultValue": "",
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "Welcome Message",
+        "Category": "ReSkate:skateboarding",
+        "Subcategory": "Server:dns:1",
+        "Description": "A chat line sent to each player as they join",
+        "Keywords": "welcome,message,motd",
+        "FieldName": "welcome_message",
+        "InputType": "text",
+        "ParamFieldName": "$.server.welcome_message",
+        "DefaultValue": "",
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "Player Limit",
+        "Category": "ReSkate:skateboarding",
+        "Subcategory": "Server:dns:1",
+        "Description": "The maximum number of players on the server at once (1 to 249)",
+        "Keywords": "maximum,players,limit,slots",
+        "FieldName": "$MaxUsers",
+        "InputType": "number",
+        "MinValue": "1",
+        "MaxValue": "249",
+        "ParamFieldName": "$.server.max_players",
+        "DefaultValue": "16",
+        "Placeholder": "16",
+        "Suffix": "players",
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "Listed in Server Browser",
+        "Category": "ReSkate:skateboarding",
+        "Subcategory": "Server:dns:1",
+        "Description": "If unticked, the server is hidden from the browser; players can still join with its join code",
+        "Keywords": "listed,public,browser",
+        "FieldName": "listed",
+        "InputType": "checkbox",
+        "ParamFieldName": "$.server.listed",
+        "DefaultValue": "true",
+        "EnumValues": {
+            "False": "false",
+            "True": "true"
+        }
+    },
+    {
+        "DisplayName": "Steam Token",
+        "Category": "ReSkate:skateboarding",
+        "Subcategory": "Server:dns:1",
+        "Description": "A Steam game server login token (create one at https://steamcommunity.com/dev/managegameservers using App ID 3354750). Without one the server gets a new Steam ID every start and is hidden when players filter the browser to servers with a token",
+        "Keywords": "steam,token,gslt",
+        "FieldName": "steam_token",
+        "InputType": "Password",
+        "ParamFieldName": "$.server.steam_token",
+        "DefaultValue": "",
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "Starting Map",
+        "Category": "ReSkate:skateboarding",
+        "Subcategory": "Maps:map:2",
+        "Description": "The map the server starts on, by name (e.g. San Vansterdam). Custom maps must be in the server's Mods folder",
+        "Keywords": "map,level",
+        "FieldName": "map",
+        "InputType": "text",
+        "ParamFieldName": "$.maps.map",
+        "DefaultValue": "San Vansterdam",
+        "Placeholder": "San Vansterdam",
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "Map Rotation Interval",
+        "Category": "ReSkate:skateboarding",
+        "Subcategory": "Maps:map:2",
+        "Description": "Minutes between map changes through the map pool. 0 turns rotation off",
+        "Keywords": "rotation,map,pool",
+        "FieldName": "rotation_minutes",
+        "InputType": "number",
+        "MinValue": "0",
+        "ParamFieldName": "$.maps.rotation_minutes",
+        "DefaultValue": "0",
+        "Placeholder": "0",
+        "Suffix": "minutes",
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "Use Global Bans",
+        "Category": "ReSkate:skateboarding",
+        "Subcategory": "Server:dns:1",
+        "Description": "Block players banned from ReSkate multiplayer by the ReSkate team",
+        "Keywords": "bans,global",
+        "FieldName": "use_global_bans",
+        "InputType": "checkbox",
+        "ParamFieldName": "$.access.use_global_bans",
+        "DefaultValue": "true",
+        "EnumValues": {
+            "False": "false",
+            "True": "true"
+        }
+    }
+]

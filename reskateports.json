@@ -1,0 +1,16 @@
+[
+    {
+        "Protocol": "UDP",
+        "Port": 27015,
+        "Ref": "GamePort",
+        "Name": "Game Port",
+        "Description": "Direct game traffic. Optional: players connect through Steam's relay network by default, so this only needs forwarding for ping display and faster joins"
+    },
+    {
+        "Protocol": "UDP",
+        "Port": 27016,
+        "Ref": "QueryPort",
+        "Name": "Steam Query Port",
+        "Description": "Steam server query traffic. Optional, same as the game port"
+    }
+]
